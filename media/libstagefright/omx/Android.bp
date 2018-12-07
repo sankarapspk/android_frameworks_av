@@ -58,6 +58,14 @@ cc_library_shared {
         "android.hardware.graphics.bufferqueue@1.0",
     ],
 
+    product_variables: {
+        pixeldust: {
+            uses_qcom_bsp_legacy: {
+                cppflags: ["-DQCOM_BSP_LEGACY"],
+            },
+        },
+    },
+    
     export_shared_lib_headers: [
         "libmedia_omx",
         "libstagefright_foundation",
